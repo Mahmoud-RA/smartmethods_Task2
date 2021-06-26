@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+<head>
+<nav class="navbar navbar-brand">
+    <a class="navbar-brand" href="#">
+      <img src="logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+        <a>  Smart Methods </a>
+    </a>
+  </nav>
+</head>
+
+<body>
+    <div class="container mx-auto my-4">
+        <form action="setValues.php" method="post">
+        <div class="card card-body py-2 my-2">
+        <div class="row row-cols-3 g-1 g-sm-3">
+            <div class="col">
+                Engine 1
+            </div>
+<div class="rangeslider col text-center">
+<input type="range" name="value1" min="0" max="5" value="0"
+				class="myslider" id="value1">
+</div>
+<div class="rangeslider col text-center">
+<p> Value: <span id="value11"></span></p>
+</div>
+</div>
+</div>
+
+<div class="card card-body py-2 my-2">
+    <div class="row row-cols-3 g-1 g-sm-3">
+        <div class="col">
+            Engine 2
+        </div>
+<div class="rangeslider col text-center">
+<input type="range" name="value2" min="0" max="5" value="0"
+            class="myslider" id="value2">
+</div>
+<div class="rangeslider col text-center">
+<p> Value: <span id="value22"></span></p>
+</div>
+</div>
+</div>
+
+<div class="card card-body py-2 my-2">
+    <div class="row row-cols-3 g-1 g-sm-3">
+        <div class="col">
+            Engine 3
+        </div>
+<div class="rangeslider col text-center">
+<input type="range" name="value3" min="0" max="5" value="0"
+            class="myslider" id="value3">
+</div>
+<div class="rangeslider col text-center">
+<p> Value: <span id="value33"></span></p>
+</div>
+</div>
+</div>
+
+<div class="card card-body py-2 my-2">
+    <div class="row row-cols-3 g-1 g-sm-3">
+        <div class="col">
+            Engine 4
+        </div>
+<div class="rangeslider col text-center">
+<input type="range" name="value4" min="0" max="5" value="0"
+            class="myslider" id="value4">
+</div>
+<div class="rangeslider col text-center">
+<p> Value: <span id="value44"></span></p>
+</div>
+</div>
+</div>
+
+
+<div class="card card-body py-2 my-2">
+    <div class="row row-cols-3 g-1 g-sm-3">
+        <div class="col">
+            Engine 5
+        </div>
+<div class="rangeslider col text-center">
+<input type="range" name="value5" min="0" max="5" value="0"
+            class="myslider" id="value5">
+</div>
+<div class="rangeslider col text-center">
+<p> Value: <span id="value55"></span></p>
+</div>
+</div>
+</div>
+
+<div class="card card-body py-2 my-2">
+    <div class="row row-cols-3 g-1 g-sm-3">
+        <div class="col">
+            Engine 6
+        </div>
+<div class="rangeslider col text-center">
+<input type="range" name="value6" min="0" max="5" value="0"
+            class="myslider" id="value6">
+</div>
+<div class="rangeslider col text-center">
+<p> Value: <span id="value66"></span></p>
+</div>
+</div>
+</div>
+
+<div class="card card-body py-2 my-2">
+    <div class="row row-cols-2 g-2 g-sm-2">
+    <button type="submit" class="btn btn-primary" id="Save" name="Save" onclick="myFunction()">Save</button>
+   <script>
+        function myFunction() {
+          alert('Are you sure you want to save these values ?');
+        }
+        </script>
+    <button type="submit" class="btn btn-primary" id="Run" name="Run" onclick="runfun()">Run</button>
+    <script>
+        function runfun() {
+          alert('Are you sure you want to run the engines with these values ?');
+        }
+        </script>
+</div>
+</div>
+</form>
+</div>
+
+
+<div class="container mx-auto my-4">
+    <div class="card card-body py-2 my-2">
+        <div class="row">
+            <div class="col">
+                Rubots Direction
+            </div>
+        </div>
+        <div class="row"> <br> </div>
+        <div class="row d-flex justify-content-center">
+            <button type="button" class="btn btn-outline-dark" id="up" name="up" value="up" onclick="Direction(this.id)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="dir-button bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+                  </svg>
+            </button>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <button type="submit" id="left" class="btn btn-outline-dark"  name="left" value="left" onclick="Direction(this.id)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                  </svg>
+            </button>
+            <button type="button" class="btn btn-outline-dark" id="Stop" name="Stop" value="Stop" onclick="Direction(this.id)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stop" viewBox="0 0 16 16">
+                    <path d="M3.5 5A1.5 1.5 0 0 1 5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5zM5 4.5a.5.5 0 0 0-.5.5v6a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5V5a.5.5 0 0 0-.5-.5H5z"/>
+                  </svg>
+            </button>
+            <button type="button" class="btn btn-outline-dark" id="right" name="right" value="right" onclick="Direction(this.id)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                  </svg>
+            </button>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <button type="button" class="btn btn-outline-dark" id="Down" name="Down" value="Down" onclick="Direction(this.id)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+                  </svg>
+            </button>
+        </div>
+            </div>
+            </div>
+</div>
+
+
+<script>
+    function Direction(id) {
+    btn = document.getElementById(id);
+     
+    
+    
+     // Adding event listener to button
+     btn.addEventListener("click", () => {
+     
+     // Fetching Button value
+     let btnValue = btn.value;
+  
+     // jQuery Ajax Post Request
+     $.post('setValues.php', {
+         btnValue: btnValue
+     }, (response) => {
+         // response from PHP back-end
+         alert(response);
+     });
+ });
+
+}
+        </script>
+    
+
+
+<script>
+    /* This is for Eninge 1 */
+var rangeslider1 = document.getElementById("value1");
+var output1 = document.getElementById("value11");
+output1.innerHTML = rangeslider1.value;
+
+rangeslider1.oninput = function() {
+output1.innerHTML = this.value;
+}
+
+    /* This is for Eninge 2 */
+    var rangeslider2 = document.getElementById("value2");
+var output2 = document.getElementById("value22");
+output2.innerHTML = rangeslider2.value;
+
+rangeslider2.oninput = function() {
+output2.innerHTML = this.value;
+}
+
+    /* This is for Eninge 3 */
+    var rangeslider3 = document.getElementById("value3");
+var output3 = document.getElementById("value33");
+output3.innerHTML = rangeslider3.value;
+
+rangeslider3.oninput = function() {
+output3.innerHTML = this.value;
+}
+
+    /* This is for Eninge 4 */
+    var rangeslider4 = document.getElementById("value4");
+var output4 = document.getElementById("value44");
+output4.innerHTML = rangeslider4.value;
+
+rangeslider4.oninput = function() {
+output4.innerHTML = this.value;
+}
+
+    /* This is for Eninge 5 */
+    var rangeslider5 = document.getElementById("value5");
+var output5 = document.getElementById("value55");
+output5.innerHTML = rangeslider5.value;
+
+rangeslider5.oninput = function() {
+output5.innerHTML = this.value;
+}
+
+    /* This is for Eninge 6 */
+    var rangeslider6 = document.getElementById("value6");
+var output6 = document.getElementById("value66");
+output6.innerHTML = rangeslider6.value;
+
+rangeslider6.oninput = function() {
+output6.innerHTML = this.value;
+}
+
+</script>
+
+
+
+</body>
+</html>
